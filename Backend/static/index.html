@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+</head>
+<body>
+    <h1> Formulário Completo em HTML</h1>
+
+    <!-- Criar o formulario-->
+    <!-- Action => para onde os dados vão-->
+    <!-- method => para onde form vai ser enviado-->
+    <form action="/registro" method="POST">
+        <label for ="nome" >Nome: </label>
+    </br>
+        <input
+            type="text" 
+            name="nome"
+            placeholder="Digite seu nome completo"
+            Required />
+            
+    </br>
+        <label for = "email" > Email:</label>
+    </br>
+        <input 
+            type="email"
+            name="email" 
+            placeholder ="Digite seu Email"
+            required />
+    </br>
+    <label for = "email" > Senha:</label>
+    </br>
+        <input 
+            type="password"
+            name="senha" 
+            placeholder ="Digite a sua Senha"
+            required />
+     </br>
+     
+        <h2> Preferências</h2>
+        <p> Gênero</p>
+
+        <input type="radio" name="genero" value="Masculino" />
+        <label for="Masculino"> Masculino</label>
+        <input type="radio" name="genero" value="Feminino" />
+        <label for="Feminino"> Feminino</label>
+        <input type="radio" name="genero" value="Neutre" />
+        <label for="Neutre"> Neutre</label>
+    </br>
+    <p> Preferências</p>
+
+        <input type="radio" name="posicao_sex" value="ativo" />
+        <label for="Ativo"> Ativo</label>
+        <input type="radio" name="posicao_sex" value="passivo" />
+        <label for="Passivo"> Passivo</label>
+        <input type="radio" name="posicao_sex" value="verstatil" />
+        <label for="versatil"> Versátil</label>
+    </br>
+    </br>
+        <label for ="cidade"> Cidade:</label>
+    </br> 
+        <select name="cidade"> 
+            <option value="" > Selecione sua cidade</option>
+            <option value="Goiânia" > Goiânia</option>
+            <option value="Brasília" > Brasília</option>
+            <option value="Cuiabá" > Cuiabá</option>
+        </select>
+    </br>      
+    </br>  
+        <label for="data_nascimento"> Data de Nascimento</label>
+    </br> 
+        <input type ="date" name="data_nascimento">
+        </br>
+           <!-- botão de ação submit-->
+
+    <div>
+        <input type="submit" value="Enviar" />
+    </div>
+  
+    </form>
+</br>
+    
+
+ 
+
+    
+</body>
+</html>
