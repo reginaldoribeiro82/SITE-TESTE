@@ -1,27 +1,20 @@
 package conn
 
 import (
-	"database/sql"
+	"context"
 	"fmt"
 	_ "github.com/lib/pq"
 	"github.com/jackc/pgx/v5"
 	"os"
 )
 
-//Variaveis com informacoes necessarias para conexao com o banco de dados
-const (
-	host     = "localhost"
-	port     = 5432
-	user     = "postgres"
-	password = "123456"
-	dbname   = "Site_Teste"
-)
+
 
 // ConectaDB estabelece a conexão com o banco de dados PostgreSQL.
 func ConectaDB() (*pgx.Conn, error) {
 	// Formato da string de conexão: "postgres://username:password@localhost:5432/database_name"
 	// Substitua com seu usuário, senha e nome do banco de dados.
-	connString := "postgres://seu_usuario:sua_senha@localhost:5432/site_teste"
+	connString := "postgres://postgre:123456@localhost:5432/site_teste"
 
 	conn, err := pgx.Connect(context.Background(), connString)
 	if err != nil {
